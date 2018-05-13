@@ -1,0 +1,7 @@
+<button (click)="handleOnClick()">Display Details</button>
+<p *ngIf="showDetail">Secret Password = tuna</p>
+<div 
+  *ngFor="let item of btnClickArray;"
+  [ngStyle]="{'background': item >=5 ? 'blue':''}"
+  [ngClass]="{'afterfifth': item>=5}"> {{item}}
+</div>
