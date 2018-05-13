@@ -12,7 +12,9 @@ export class ButtonLogComponent implements OnInit {
   constructor() { }
   handleOnClick() {
     this.showDetail=!this.showDetail;
-    this.btnClickArray.push(++this.btnClickCount);
+    // this.btnClickArray.push(++this.btnClickCount);
+    this.btnClickArray.push(new Date());
+
   }
   ngOnInit() {
   }
