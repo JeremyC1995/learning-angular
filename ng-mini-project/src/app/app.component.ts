@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  loadedPage = 'recipe';
   title = 'app';
+  onNav(page: string) {
+    this.loadedPage=page;
+  }
 }

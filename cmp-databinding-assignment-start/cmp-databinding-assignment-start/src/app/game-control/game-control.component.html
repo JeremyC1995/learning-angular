@@ -3,6 +3,7 @@
     <div class="col-xs-12">
       <button class="btn btn-primary" (click)="onStart()" [disabled]="isStarted">Start!!!</button>
       <button class="btn btn-danger" (click)="onStop()" [disabled]="!isStarted">Stop!!!</button>
+      <ng-content></ng-content>
     </div>
   </div>
 </div>

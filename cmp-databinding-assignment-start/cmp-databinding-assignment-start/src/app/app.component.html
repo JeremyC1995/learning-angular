@@ -15,4 +15,7 @@
     </div>
   </div>
 </div>
-<app-game-control (starting)="onStart($event)"></app-game-control>
+<app-game-control (starting)="onStart($event)">
+  <app-odd *ngFor="let item of odd" [num]="item"></app-odd>
+  <app-even *ngFor="let item of even"></app-even>
+</app-game-control>

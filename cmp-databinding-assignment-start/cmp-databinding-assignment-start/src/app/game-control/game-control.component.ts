@@ -10,15 +10,15 @@ export class GameControlComponent implements OnInit {
   constructor() { }
   isStarted: boolean = false;
   ref;
+  counter: number = 0;  
   ngOnInit() {
   }
 
   onStart() {
     this.isStarted = true;
-    let counter = 0;
     this.ref = setInterval(()=>{
-      counter++;
-      this.starting.emit(counter);
+      this.counter++;
+      this.starting.emit(this.counter);
     },1000);
   }
   onStop() {
