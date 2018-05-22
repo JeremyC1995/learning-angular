@@ -1,4 +1,4 @@
-import { Component, Input  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 
 @Component({
@@ -6,11 +6,14 @@ import { UserService } from '../user.service';
   templateUrl: './active-users.component.html',
   styleUrls: ['./active-users.component.css']
 })
-export class ActiveUsersComponent {
-  @Input() users: string[];
+export class ActiveUsersComponent implements OnInit{
+  users: String[];
   constructor(private userSvc: UserService){}
 
+  ngOnInit() {
+    this.users= this.userSvc.activeUsers;
+  }
   onSetToInactive(id: number) {
-    this.userSvc.onSetToInactive(id);
+    this.userSvc.setToInactive(id);
   }
 }
